@@ -1,0 +1,53 @@
+doctype html
+html
+    head
+        title Construction Company
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet' href='/css/lc_lightbox.min.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+            a.navbar-brand(href='/')
+                img.navbar-brand-logo(src="/img/logo/logo.svg", alt="Some Logo") 
+                | ConstructionCompany
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNavDropdown.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item
+                        a.nav-link(href='/') Home 
+                            span.sr-only (current)
+                    li.nav-item.dropdown
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') About Us
+                        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            a.dropdown-item(href='/navigation/about-us') Company Profile
+                            a.dropdown-item(href='/navigation/bofd') Board of Directors
+                            a.dropdown-item(href='/navigation/mission-vision') Mission and Vision
+                    li.nav-item.dropdown
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Projects
+                        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            a.dropdown-item(href='/navigation/ongoing-projects') Ongoing Projects
+                            a.dropdown-item(href='/navigation/upcoming-projects') Upcoming Projects
+                            a.dropdown-item(href='/navigation/past-projects') Past Projects
+                    li.nav-item
+                        a.nav-link(href='/navigation/gallery') Photo Gallery
+                    li.nav-item.dropdown
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Booking
+                        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            a.dropdown-item(href='#') Online Booking
+                            a.dropdown-item(href='#') Availability
+                    li.nav-item
+                        a.nav-link(href='/navigation/contact-us') Contact Us
+        
+        .container
+            br
+            block content
+            br
+        hr
+        footer.text-center.footer-main
+            p Copyright ContructionCompany &copy 2020 
+        script(src='/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.bundle.js')
+        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js')
+        script(src='/js/main.js')

@@ -1,0 +1,75 @@
+nav{
+    height: auto;
+}
+nav img{
+    height: 3em;
+    width: 3em;
+}
+#navbarNavDropdown{
+    justify-content: flex-end;
+}
+.navbar-brand-logo{
+    margin-right: 1rem;
+}
+.nav-item{
+    padding: 0rem 1rem;
+}
+
+/*Index*/
+.main-title{
+    text-align: end;
+}
+
+/*Carousel*/
+.black-shadow-div{
+    background-color: rgba(0,0,0,0.5);
+}
+
+/*AboutUs*/
+.background-image-aboutUs{
+    background: url('/img/photos/image2.jpg');
+    background-size: 100%;
+}
+
+.content-to-end-flex{
+    justify-content: flex-end;
+}
+
+.content-to-end-block{
+    float: right;
+}
+
+/* Board of Directors */
+
+.background-image-bofd{
+    background: url('/img/photos/bofd_bg.jpg');
+    background-size: 100%;
+    background-position: bottom;
+}
+.bofd-picture{
+    height: 10em;
+    width: 10em;
+}
+
+/* Mission and Vision */
+.background-image-mission-vision{
+    background: url('/img/photos/work-image2.jpg');
+    background-size: 100%;
+    background-position: center center;
+}
+
+/* Gallery Effects */
+.gallery img:hover{
+    transform: scale(1.05);
+    transition: all 0.3s ease-in;
+}
+
+.small-icon{
+    width: 2rem;
+    height: 2rem;
+    margin:  0rem 0.5rem;
+}
+
+.footer-main{
+    padding: 1rem;
+}

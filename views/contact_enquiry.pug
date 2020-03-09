@@ -1,0 +1,73 @@
+extends layout
+
+block content
+    .jumbotron.background-image-aboutUs.text-white.text-right
+        h1.display-4 Contact Us
+        p.lead
+            | Keep in touch with us.
+        hr.my-4
+        p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt placeat vel magni, quo, doloremque error sint ex ratione debitis dicta. Maxime nam, aperiam ex obcaecati delectus ut molestiae perspiciatis?
+    br
+    .row
+        .col-md-3
+            .card
+                .card-header    
+                    h5.text-center.font-weight-bold Contact Us
+                .card-body
+                    nav.nav.flex-column
+                        a.nav-link.active.text-black(href='/navigation/contact-enquiry') Enquiry Form
+                        a.nav-link.secondary(href='/navigation/contact-feedback') Feedback Form
+            hr
+            h6.text-right Ongoing Projects
+            #carouselExampleControls.carousel.slide(data-ride='carousel')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='/img/photos/image1.jpg', alt='...')
+                    .carousel-item
+                        img.d-block.w-100(src='/img/photos/image3.jpg', alt='...')
+                    .carousel-item
+                        img.d-block.w-100(src='/img/photos/image4.jpg', alt='...')
+                a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+        .col-md-9
+            nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='/') Home
+                    li.breadcrumb-item
+                        a(href='/navigation/contact-us') Contact Us
+                    li.breadcrumb-item.active(aria-current='page') Enquiry
+            form(action="/navigation/enquiry-form-post" method="post")
+                .form-row
+                    .form-group.col
+                        label(for='name') Name
+                        input#name.form-control(type='text')
+                .form-row
+                    .form-group.col-md-6
+                        label(for='email') Email
+                        input#email.form-control(type='email')
+                    .form-group.col-md-6
+                        label(for='mobileNo') Mobile 
+                        input#mobileNo.form-control(type='number')
+                .form-group
+                        label(for='enquiry') Enquiry
+                        textarea#enquiry.form-control(type='text', placeholder='Enter your Enquiry Here ..' ,style="height:10rem")
+                .form-row
+                    .form-group.col-md-6
+                        label(for='city') City
+                        input#city.form-control(type='text')
+                    .form-group.col-md-4
+                        label(for='state') State
+                        select#state.form-control
+                            option(selected='') Choose...
+                            option(value="maharastra") Maharastra
+                            option(value="gujrat") Gujrat
+                    .form-group.col-md-2
+                        label(for='pincode') Pincode
+                        input#pincode.form-control(type='text')
+                button.btn.btn-primary(type='submit') Send Enquiry

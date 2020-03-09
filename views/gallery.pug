@@ -1,0 +1,128 @@
+doctype html
+html
+    head
+        title Construction Company
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        link(rel='stylesheet' href='/bower_components/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet' href='/css/uikit.min.css')
+        link(rel='stylesheet' href='/css/style.css')
+    body
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top
+            a.navbar-brand(href='/')
+                img.navbar-brand-logo(src="/img/logo/logo.svg", alt="Some Logo") 
+                | ConstructionCompany
+            button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavDropdown', aria-controls='navbarNavDropdown', aria-expanded='false', aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNavDropdown.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href='/') Home 
+                            span.sr-only (current)
+                    li.nav-item.dropdown
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') About Us
+                        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            a.dropdown-item(href='/navigation/about-us') Company Profile
+                            a.dropdown-item(href='/navigation/bofd') Board of Directors
+                            a.dropdown-item(href='/navigation/mission-vision') Mission and Vision
+                    li.nav-item.dropdown
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Projects
+                        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            a.dropdown-item(href='/navigation/ongoing-projects') Ongoing Projects
+                            a.dropdown-item(href='/navigation/upcoming-projects') Upcoming Projects
+                            a.dropdown-item(href='/navigation/past-projects') Past Projects
+                    li.nav-item
+                        a.nav-link(href='/navigation/gallery') Photo Gallery
+                    li.nav-item.dropdown
+                        a#navbarDropdownMenuLink.nav-link.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') Booking
+                        .dropdown-menu(aria-labelledby='navbarDropdownMenuLink')
+                            a.dropdown-item(href='#') Online Booking
+                            a.dropdown-item(href='#') Availability
+                    li.nav-item
+                        a.nav-link(href='/navigation/contact-us') Contact Us
+        .container
+            br
+            .jumbotron.background-image-aboutUs.text-white.text-right
+                h1.display-4.text-white Gallery
+                p.lead
+                    | Art that we have created and are creating.
+                hr.my-4
+                p
+                    | Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt placeat vel magni, quo, doloremque error sint ex ratione debitis dicta. Maxime nam, aperiam ex obcaecati delectus ut molestiae perspiciatis?
+            br
+            .row
+                .col-md-3
+                    .card
+                        .card-header    
+                            h5.text-center.font-weight-bold Gallery
+                        .card-body
+                            ul.nav.flex-column
+                                li.nav-item.d-inline-flex
+                                    img.small-icon(src="/img/logo/building.svg", alt="building icon")
+                                    a.nav-link.p-2.active(href='#') Project 1
+                                li.nav-item.d-inline-flex
+                                    img.small-icon(src="/img/logo/building.svg", alt="building icon")
+                                    a.nav-link.p-2.active(href='#') Project 2
+                                li.nav-item.d-inline-flex
+                                    img.small-icon(src="/img/logo/building.svg", alt="building icon")
+                                    a.nav-link.p-2.active(href='#') Project 3
+                                li.nav-item.d-inline-flex
+                                    img.small-icon(src="/img/logo/building.svg", alt="building icon")
+                                    a.nav-link.p-2.active(href='#') Project 4
+
+                    hr
+                    h6.text-right Ongoing Projects
+                    #carouselExampleControls.carousel.slide(data-ride='carousel')
+                        .carousel-inner
+                            .carousel-item.active
+                                img.d-block.w-100(src='/img/photos/image1.jpg', alt='...')
+                            .carousel-item
+                                img.d-block.w-100(src='/img/photos/image3.jpg', alt='...')
+                            .carousel-item
+                                img.d-block.w-100(src='/img/photos/image4.jpg', alt='...')
+                        a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+                            span.carousel-control-prev-icon(aria-hidden='true')
+                            span.sr-only Previous
+                        a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+                            span.carousel-control-next-icon(aria-hidden='true')
+                            span.sr-only Next
+                .col-md-9
+                    nav(aria-label='breadcrumb')
+                        ol.breadcrumb
+                            li.breadcrumb-item
+                                a(href='/') Home
+                            li.breadcrumb-item.active
+                                a(href='/navigation/gallery' aria-current='page') #{page}
+                    .row.gallery(uk-grid uk-lightbox="animation: slide")
+                        .col-sm-4
+                            a(href="/img/gallery/gallery-1.jpg" data-caption="This is Image 1")
+                                img.mb-2(src='/img/gallery/gallery-1-sq.jpg', alt='image 1')
+                            a(href="/img/gallery/gallery-2.jpg" data-caption="This is Image 2")
+                                img.mb-2(src='/img/gallery/gallery-2-sq.jpg', alt='image 2')
+                            a(href="/img/gallery/gallery-3.jpg" data-caption="This is Image 3")
+                                img.mb-2(src='/img/gallery/gallery-3-sq.jpg', alt='image 3' )
+                        .col-sm-4.p-0
+                            a(href="/img/gallery/gallery-4.jpg" data-caption="This is Image 4")
+                                img.mb-2(src='/img/gallery/gallery-4-sq.jpg', alt='image 4')
+                            a(href="/img/gallery/gallery-5.jpg" data-caption="This is Image 5")
+                                img.mb-2(src='/img/gallery/gallery-5-sq.jpg', alt='image 5')
+                            a(href="/img/gallery/gallery-6.jpg" data-caption="This is Image 6")
+                                img.mb-2(src='/img/gallery/gallery-6-sq.jpg', alt='image 6')
+                        .col-sm-4
+                            a(href="/img/gallery/gallery-7.jpg" data-caption="This is Image 7")
+                                img.mb-2(src='/img/gallery/gallery-7-sq.jpg', alt='image 7')
+                            a(href="/img/gallery/gallery-8.jpg" data-caption="This is Image 8")
+                                img.mb-2(src='/img/gallery/gallery-8-sq.jpg', alt='image 8')
+                            a(href="/img/gallery/gallery-9.jpg" data-caption="This is Image 9")
+                                img.mb-2(src='/img/gallery/gallery-9-sq.jpg', alt='image 9')
+            br  
+        hr
+        footer.text-center.footer-main
+            p Copyright ContructionCompany &copy 2020 
+        script(src='/bower_components/jquery/dist/jquery.min.js')
+        script(src='/bower_components/bootstrap/dist/js/bootstrap.bundle.js')
+        script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js')
+        script(src="/js/uikit-icons.min.js")
+        script(src="/js/uikit.min.js")
+        script(src='/js/main.js')
+            
+    

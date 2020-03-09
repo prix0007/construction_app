@@ -1,0 +1,77 @@
+extends layout  
+
+block content   
+    .jumbotron.background-image-bofd.text-white.text-right
+        h1.display-4 Board of Directors
+        p.lead
+            | World Class Team with Excellence in Management.
+        hr.my-4
+        p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt placeat vel magni, quo, doloremque error sint ex ratione debitis dicta. Maxime nam, aperiam ex obcaecati delectus ut molestiae perspiciatis?
+    .row
+        .col-md-3
+            .card
+                .card-header    
+                    h5.text-center.font-weight-bold About Us
+                .card-body
+                    nav.nav.flex-column
+                        a.nav-link.active.text-black(href='/navigation/about-us') Company Profile
+                        a.nav-link.secondary(href='/navigation/bofd') Board of Directors
+                        a.nav-link.text-black(href='/navigation/mission-vision') Missions and Visions
+            hr
+            h6.text-right Ongoing Projects
+            #carouselExampleControls.carousel.slide(data-ride='carousel')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='/img/photos/image1.jpg', alt='...')
+                    .carousel-item
+                        img.d-block.w-100(src='/img/photos/image3.jpg', alt='...')
+                    .carousel-item
+                        img.d-block.w-100(src='/img/photos/image4.jpg', alt='...')
+                a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+        .col-md-9
+            nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='/') Home
+                    li.breadcrumb-item
+                        a(href='/navigation/about-us') About Us
+                    li.breadcrumb-item.active(aria-current='page') Board of Directors
+            .card.text-right
+                .card-body.row
+                    .col
+                        h5.card-title Engg. Jane Doe
+                        p.card-text Cheif operations Manager
+                        p.card-text With Experience over 20 Years in Infrastructure and management he is here leading this team.
+                    .col-4
+                        img.card-img-top.bofd-picture(src="/img/people/people1-sq.jpg" alt="People Image 1")
+            .card.text-right
+                .card-body.row
+                    .col
+                        h5.card-title Engg. Hanna John
+                        p.card-text Cheif operations Manager
+                        p.card-text With Experience over 20 Years in Infrastructure and management he is here leading this team.
+                    .col-4
+                        img.card-img-top.bofd-picture(src="/img/people/people2-sq.jpg" alt="People Image 2")
+            .card.text-right
+                .card-body.row
+                    .col
+                        h5.card-title CA Jane Doe
+                        p.card-text Operations Manager
+                        p.card-text With Experience over 20 Years in Infrastructure and management he is here leading this team.
+                    .col-4
+                        img.card-img-top.bofd-picture(src="/img/people/people3-sq.png" alt="People Image 3")
+            .card.text-right
+                .card-body.row
+                    .col
+                        h5.card-title Architect May John
+                        p.card-text Cheif Architect
+                        p.card-text With Experience over 20 Years in Infrastructure and management he is here leading this team.
+                    .col-4
+                        img.card-img-top.bofd-picture(src="/img/people/people4-sq.jpg" alt="People Image 4")
+

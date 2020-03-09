@@ -1,0 +1,10 @@
+express
+express-validator
+express-session
+express-messages
+body-parser
+path
+mongoose
+connect-flash
+passport
+pug

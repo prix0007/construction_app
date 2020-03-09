@@ -1,0 +1,115 @@
+extends layout  
+
+block content   
+    .jumbotron.background-image-aboutUs.text-white.text-right
+        h1.display-4 Projects
+        p.lead
+            | Our work speaks more , than we do for us.
+        hr.my-4
+        p
+            | Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti deserunt placeat vel magni, quo, doloremque error sint ex ratione debitis dicta. Maxime nam, aperiam ex obcaecati delectus ut molestiae perspiciatis?
+    .row
+        .col-md-3
+            .card
+                .card-header    
+                    h5.text-center.font-weight-bold Projects
+                .card-body
+                    nav.nav.flex-column
+                        a.nav-link.active(href='/navigation/ongoing-projects') Ongoing Projects
+                        a.nav-link(href='/navigation/upcoming-projects') Upcoming Projects
+                        a.nav-link(href='/navigation/past-projects') Past Projects
+            hr
+            h6.text-right Ongoing Projects
+            #carouselExampleControls.carousel.slide(data-ride='carousel')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='/img/photos/image1.jpg', alt='Image1')
+                    .carousel-item
+                        img.d-block.w-100(src='/img/photos/image3.jpg', alt='Image2')
+                    .carousel-item
+                        img.d-block.w-100(src='/img/photos/image4.jpg', alt='Image3')
+                a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+        .col-md-9
+            nav(aria-label='breadcrumb')
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='/') Home
+                    li.breadcrumb-item
+                        a(href='/navigation/ongoing-projects') Projects
+                    li.breadcrumb-item.active(aria-current='page') #{page}
+            hr
+            nav
+                #nav-tab.nav.nav-tabs(role='tablist')
+                    a#nav-home-tab.nav-item.nav-link.active.p-2(data-toggle='tab', href='#nav-ongoing-project-1', role='tab', aria-controls='nav-ongoing-project-1', aria-selected='true') Project 1
+                    a#nav-profile-tab.nav-item.nav-link.p-2(data-toggle='tab', href='#nav-ongoing-project-2', role='tab', aria-controls='nav-ongoing-project-2', aria-selected='false') Project 2
+                    a#nav-contact-tab.nav-item.nav-link.p-2(data-toggle='tab', href='#nav-ongoing-project-3', role='tab', aria-controls='nav-ongoing-project-3', aria-selected='false') Project 3
+            #nav-tabContent.tab-content
+                #nav-ongoing-project-1.tab-pane.fade.show.active.p-5(role='tabpanel', aria-labelledby='nav-ongoing-project-1-tab')
+                    .card.mb-3
+                        .row.no-gutters
+                            .col-md-4
+                                img.card-img(src='/img/photos/image1.jpg', alt='Site 1 Image')
+                            .col-md-8
+                                .card-body
+                                    h5.card-title Construction Project 1
+                                    p.card-text
+                                    | This is a our latest and ongoin project in full fledged manner.
+                                    p.card-text
+                                        small.text-muted Address : Nagpur , Maharastra ,IN
+                            .card-body
+                                p.card-text Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                | Recusandae dignissimos cumque temporibus quos voluptatem velit itaque
+                                | dolorum harum cum, odit voluptate nam neque aut eveniet distinctio 
+                                |laboriosam repellat, hic maxime?
+                                p.card-text Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                                |. Suscipit quos voluptatem quasi labore laborum dolorem aspernatur quam obcaecati odit ut?
+                                a.p-0.mx-4.float-right(href="#" class="btn btn-link") Read More
+
+                #nav-ongoing-project-2.tab-pane.fade.p-5(role='tabpanel', aria-labelledby='nav-ongoing-project-2-tab')
+                    .card.mb-3
+                        .row.no-gutters
+                            .col-md-4
+                                img.card-img(src='/img/photos/image4.jpg', alt='Site 1 Image')
+                            .col-md-8
+                                .card-body
+                                    h5.card-title Construction Project 2
+                                    p.card-text
+                                    | This is a our latest and ongoin project in full fledged manner.
+                                    p.card-text
+                                        small.text-muted Address : Nagpur , Maharastra ,IN
+                            .card-body
+                                p.card-text Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                | Recusandae dignissimos cumque temporibus quos voluptatem velit itaque
+                                | dolorum harum cum, odit voluptate nam neque aut eveniet distinctio 
+                                |laboriosam repellat, hic maxime?
+                                p.card-text Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                                |. Suscipit quos voluptatem quasi labore laborum dolorem aspernatur quam obcaecati odit ut?
+                                a.p-0.mx-4.float-right(href="#" class="btn btn-link") Read More
+                #nav-ongoing-project-3.tab-pane.fade.p-5(role='tabpanel', aria-labelledby='nav-ongoing-project-3-tab')
+                    .card.mb-3
+                        .row.no-gutters
+                            .col-md-4
+                                img.card-img(src='/img/photos/image2.jpg', alt='Site 1 Image')
+                            .col-md-8
+                                .card-body
+                                    h5.card-title Construction Project 0
+                                    p.card-text
+                                    | This is a our latest and ongoin project in full fledged manner.
+                                    p.card-text
+                                        small.text-muted Address : Nagpur , Maharastra ,IN
+                            .card-body
+                                p.card-text Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                | Recusandae dignissimos cumque temporibus quos voluptatem velit itaque
+                                | dolorum harum cum, odit voluptate nam neque aut eveniet distinctio 
+                                |laboriosam repellat, hic maxime?
+                                p.card-text Lorem ipsum dolor sit, amet consectetur adipisicing elit
+                                |. Suscipit quos voluptatem quasi labore laborum dolorem aspernatur quam obcaecati odit ut?
+                                a.p-0.mx-4.float-right(href="#" class="btn btn-link") Read More
+
+            
+

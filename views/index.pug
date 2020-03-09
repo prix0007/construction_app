@@ -1,0 +1,81 @@
+extends layout
+
+block content
+    h1.main-title #{title}
+    .row
+        .col-md-12
+            #carouselExampleIndicators.carousel.slide(data-ride='carousel')
+                ol.carousel-indicators
+                    li.active(data-target='#carouselExampleIndicators', data-slide-to='0')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='1')
+                    li(data-target='#carouselExampleIndicators', data-slide-to='2')
+                .carousel-inner
+                    .carousel-item.active
+                        img.d-block.w-100(src='/img/photos/image1.jpg', alt='Construction Image 1')
+                        .carousel-caption.d-none.d-md-block.black-shadow-div
+                            h5 Construction 1
+                            p This is Site Project 1
+                    .carousel-item
+                        img.d-block.w-100(src='/img/photos/image4.jpg', alt='Construction Image 2')
+                        .carousel-caption.d-none.d-md-block.black-shadow-div
+                            h5 Construction 2
+                            p This is Site Project 2
+                    .carousel-item
+                        img.d-block.w-100(src='/img/photos/image3.jpg', alt='Construction Image 3')
+                        .carousel-caption.d-none.d-md-block.black-shadow-div
+                            h5 Construction 3
+                            p This is Site Project 3
+                a.carousel-control-prev(href='#carouselExampleIndicators', role='button', data-slide='prev')
+                    span.carousel-control-prev-icon(aria-hidden='true')
+                    span.sr-only Previous
+                a.carousel-control-next(href='#carouselExampleIndicators', role='button', data-slide='next')
+                    span.carousel-control-next-icon(aria-hidden='true')
+                    span.sr-only Next
+    br
+    .row    
+        .col-md-6.pb-2
+            .card.text-right
+                .card-header
+                    | Featured
+                .card-body.row
+                    .col
+                        img(src="/img/photos/work-image1.jpg" class="card-img-top" alt="Work Image 1")
+                    .col
+                        h5.card-title Special title treatment
+                        p.card-text With supporting text below as a natural lead-in to additional content.
+                        a.btn.btn-primary(href='#') Go somewhere
+                .card-footer.text-muted
+                    | 2 days ago
+        .col-md-6.pb-2
+            .card.text-right
+                .card-header
+                    | Featured
+                .card-body.row
+                    .col
+                        img(src="/img/photos/work-image2.jpg" class="card-img-top" alt="Work Image 2")
+                    .col
+                        h5.card-title Special title treatment
+                        p.card-text With supporting text below as a natural lead-in to additional content.
+                        a.btn.btn-primary(href='#') Go somewhere
+                .card-footer.text-muted
+                    | 2 days ago
+    br 
+    .row
+        .col-md-6
+            ul.list-group.list-group-flush
+                li.list-group-item.font-weight-bold 
+                    h3 Contact Us
+                li.list-group-item 
+                    img(src="/img/logo/location.svg" class="small-icon" alt="Location")
+                    | Mount Poonamallee Road, Manapakkam, P.B.No.979, Chennai – 600 089.
+                li.list-group-item 
+                    img(src="/img/logo/call.svg" class="small-icon" alt="Call Mobile")
+                    | 91-44-22526000, 22528000, Fax:+91-44-2249 3317
+                li.list-group-item
+                    img(src="/img/logo/email.svg" class="small-icon" alt="Email") 
+                    | info@lntecc.com
+        .col-md-6
+            .card.bg-dark.text-black.h-100
+                iframe.card-img(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2212.342475356946!2d79.05357640294034!3d21.16426581096249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c052e5bc862b%3A0x8b4fa6012f8f4f6f!2sIndian%20Institute%20of%20Information%20Technology%2CNagpur!5e0!3m2!1sen!2sin!4v1583642215557!5m2!1sen!2sin" width="auto" height="100%" frameborder="0" style="border:0;" allowfullscreen="")
+            
+        
